@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './index.css';
 
 const messages = [
@@ -7,14 +8,18 @@ const messages = [
 ];
 
 function App() {
-	const step = 1;
+	// const step = 1;
+
+	//! Using states in react
+	let [step, setStep] = useState(1);
 
 	//! Handler Functions for click event
 	function handlePrevious() {
-		alert('Previous');
+		//! conditionally updating the state
+		if (step > 1) setStep(step - 1);
 	}
 	function handleNext() {
-		alert('Next');
+		if (step < 3) setStep(step + 1);
 	}
 	function handleClose() {
 		alert('close');
