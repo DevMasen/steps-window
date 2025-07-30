@@ -8,6 +8,15 @@ const messages = [
 ];
 
 function App() {
+	return (
+		<div>
+			<Steps />
+			<Steps />
+		</div>
+	);
+}
+
+function Steps() {
 	// const step = 1;
 
 	//! Using states in react
@@ -24,7 +33,7 @@ function App() {
 	}
 
 	return (
-		<>
+		<div>
 			{/* event attributes should be in camelcase and a handler function passed to it  */}
 			<button
 				className="close"
@@ -67,7 +76,7 @@ function App() {
 					</div>
 				</div>
 			)}
-		</>
+		</div>
 	);
 }
 
