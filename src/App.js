@@ -17,10 +17,10 @@ function App() {
 	//! Handler Functions for click event
 	function handlePrevious() {
 		//! conditionally updating the state
-		if (step > 1) setStep(step - 1);
+		if (step > 1) setStep(curStep => curStep - 1);
 	}
 	function handleNext() {
-		if (step < 3) setStep(step + 1);
+		if (step < 3) setStep(curStep => curStep + 1);
 	}
 
 	return (
@@ -29,7 +29,7 @@ function App() {
 			<button
 				className="close"
 				onClick={() => {
-					setIsOpen(!isOpen);
+					setIsOpen(curIsOpen => !curIsOpen);
 				}}
 			>
 				&times;
