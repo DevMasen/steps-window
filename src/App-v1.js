@@ -11,6 +11,7 @@ function App() {
 	return (
 		<div>
 			<Steps />
+			<Steps />
 		</div>
 	);
 }
@@ -54,22 +55,24 @@ function Steps() {
 					</p>
 
 					<div className="buttons">
-						<Button
-							bgColor="#7950f2"
-							textColor="#fff"
+						<button
+							style={{
+								backgroundColor: '#7950f2',
+								color: '#fff',
+							}}
 							onClick={handlePrevious}
 						>
-							{' '}
-							<span>👈</span> Previous{' '}
-						</Button>
-						<Button
-							bgColor="#7950f2"
-							textColor="#fff"
+							<span>Previous</span>
+						</button>
+						<button
+							style={{
+								backgroundColor: '#7950f2',
+								color: '#fff',
+							}}
 							onClick={handleNext}
 						>
-							{' '}
-							Next <span>👉</span>
-						</Button>
+							<span>Next</span>
+						</button>
 					</div>
 				</div>
 			)}
@@ -77,14 +80,4 @@ function Steps() {
 	);
 }
 
-function Button({ bgColor, textColor, onClick, children }) {
-	return (
-		<button
-			style={{ backgroundColor: bgColor, color: textColor }}
-			onClick={onClick}
-		>
-			{children}
-		</button>
-	);
-}
 export default App;
